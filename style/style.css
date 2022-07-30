@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#000;
+}
+
+.container{
+    width: 270px;
+    margin: auto;
+    /* position: relative;
+    top: 200px;
+    left: 450px; */
+}
+
+/* label checkbox */
+.checkbox{
+    margin-top: 360px;
+    display: flex;
+    background-color: #ff7a00;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.checkbox__puls{
+    margin: 28px;
+    widows: 44px;
+    height: 44px;
+}
+.checkbox input{
+    opacity: 0;
+}
+.checkbox__box{
+    position: relative;
+    opacity: 0;/*0*/
+}
+
+/* label box */
+.box{
+    display: block;
+    margin-left: 65px;
+    background-color: #ff7a00;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.box input{
+    opacity: 0;
+    display: none;
+}
+
+/* box-list */
+
+.box__list{
+    opacity: 0;/*0*/
+}
+.box__list{
+    height: 321px;
+    width: 81px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -450px;
+    left: 10px;
+}
+.center{
+    margin: 39px 0;
+}
+.box__list-btn{
+    width: 82px;
+    height: 81px;
+    border-radius: 50%;
+    border: none;
+}
+
+
+
+
+/* checked */
+
+.checkbox >input:checked ~ .checkbox__box{
+    opacity: 1;
+}
+.box input:checked ~ .box__list{
+    opacity: 1;
+}
+
+.box input:checked ~ .box__list >.message{
+    position: relative;
+    top:0px;
+    animation-name: message;
+    animation-duration: 1s;
+}
+
+.box__list-message:hover{
+    
+    animation-name: message-hover;
+    animation-duration: 1s;
+}
+
+@keyframes message-hover{
+    from{
+        position: relative;
+        top:-5px;
+        left:-10px;
+        width:102px;
+        transform: rotate(360deg);
+    }
+    to{
+        position: relative;
+        top:0;
+        left: 0;
+        width: 82px;
+    }
+}
+@keyframes message{
+    from{
+        position: relative;
+        top:100px;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    to{
+        position: relative;
+        top:0;
+        opacity: 1;
+    }
+}
+
+.box input:checked ~ .box__list >.bell{
+    position: relative;
+    top:0px;
+    animation-name: bell;
+    animation-duration: 1.5s;
+}
+.box__list-bell:hover{
+    
+    animation-name: bell-hover;
+    animation-duration: 1s;
+}
+
+@keyframes bell-hover{
+    from{
+        position: relative;
+        top:-5px;
+        left:-10px;
+        width:102px;
+        transform: rotate(360deg);
+    }
+    to{
+        position: relative;
+        top:0;
+        left: 0;
+        width: 82px;
+    }
+}
+@keyframes bell{
+    from{
+        position: relative;
+        top:200px;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    to{
+        position: relative;
+        top:0;
+        opacity: 1;
+    }
+}
+
+.box input:checked ~ .box__list >.call{
+    position: relative;
+    top:0px;
+    animation-name: tell;
+    animation-duration: 2s;
+}
+.box__list-call:hover{
+    
+    animation-name: call-hover;
+    animation-duration: 1s;
+}
+
+@keyframes call-hover{
+    from{
+        position: relative;
+        top:-5px;
+        left:-10px;
+        width:102px;
+        transform: rotate(360deg);
+    }
+    to{
+        position: relative;
+        top:0;
+        left: 0;
+        width: 82px;
+    }
+}
+@keyframes tell{
+    from{
+        position: relative;
+        top:300px;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    to{
+        position: relative;
+        top:0;
+        opacity: 1;
+    }
+}
